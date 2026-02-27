@@ -11,54 +11,57 @@ function Footer({ onNavigate }: FooterProps) {
   };
 
   return (
-    <footer className="bg-green-50 border-t border-gray-200 mt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+    <footer style={{ backgroundColor: '#D4C4A8', borderTop: '2px solid #79512E', marginTop: '64px' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '48px 32px' }}>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', marginBottom: '32px' }}>
+
+          {/* NEWSLETTER */}
           <div>
-            <h3 className="font-bold text-green-700 mb-4">Subscribe to our newsletter</h3>
-            <form onSubmit={handleEmail} className="flex gap-2">
+            <h3 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '16px', color: '#790D1D', marginBottom: '16px' }}>
+              Subscribe to our newsletter
+            </h3>
+            <form onSubmit={handleEmail} style={{ display: 'flex', gap: '8px' }}>
               <input
                 type="email"
                 placeholder="Email address"
                 required
-                className="flex-1 px-4 py-2 border-2 border-green-700 focus:outline-none focus:ring-2 focus:ring-green-700"
+                style={{ flex: 1, padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C' }}
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-green-700 text-white font-medium hover:bg-green-800 transition-colors"
+                style={{ padding: '8px 24px', backgroundColor: '#790D1D', color: '#E0D2BD', fontFamily: 'Arial', fontWeight: 'bold', border: 'none', cursor: 'pointer' }}
               >
                 Subscribe
               </button>
             </form>
           </div>
 
+          {/* SOCIAL */}
           <div>
-            <h3 className="font-bold text-green-700 mb-4">Follow us</h3>
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-600 hover:text-green-700 transition-colors">
-                <Facebook size={24} />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-green-700 transition-colors">
-                <Instagram size={24} />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-green-700 transition-colors">
-                <PinIcon size={24} />
-              </a>
+            <h3 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '16px', color: '#790D1D', marginBottom: '16px' }}>
+              Follow us
+            </h3>
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <a href="#" style={{ color: '#79512E' }}><Facebook size={24} /></a>
+              <a href="#" style={{ color: '#79512E' }}><Instagram size={24} /></a>
+              <a href="#" style={{ color: '#79512E' }}><PinIcon size={24} /></a>
             </div>
           </div>
+
         </div>
 
-        <div className="border-t border-gray-200 pt-8">
-          <nav className="flex flex-wrap gap-4 justify-center text-sm text-gray-600">
-            <button onClick={() => onNavigate('home')} className="hover:text-green-700">Home</button>
-            <span>|</span>
-            <button onClick={() => onNavigate('gallery')} className="hover:text-green-700">Shop</button>
-            <span>|</span>
-            <button onClick={() => onNavigate('about')} className="hover:text-green-700">About</button>
-            <span>|</span>
-            <button onClick={() => onNavigate('community')} className="hover:text-green-700">Community</button>
-          </nav>
+        {/* NAV LINKS */}
+        <div style={{ borderTop: '1px solid #79512E', paddingTop: '32px', display: 'flex', justifyContent: 'center', gap: '16px' }}>
+          <button onClick={() => onNavigate('home')} style={{ fontFamily: 'Arial', fontSize: '14px', color: '#00231C', background: 'none', border: 'none', cursor: 'pointer' }}>Home</button>
+          <span style={{ color: '#79512E' }}>|</span>
+          <button onClick={() => onNavigate('gallery')} style={{ fontFamily: 'Arial', fontSize: '14px', color: '#00231C', background: 'none', border: 'none', cursor: 'pointer' }}>Shop</button>
+          <span style={{ color: '#79512E' }}>|</span>
+          <button onClick={() => onNavigate('about')} style={{ fontFamily: 'Arial', fontSize: '14px', color: '#00231C', background: 'none', border: 'none', cursor: 'pointer' }}>About</button>
+          <span style={{ color: '#79512E' }}>|</span>
+          <button onClick={() => onNavigate('community')} style={{ fontFamily: 'Arial', fontSize: '14px', color: '#00231C', background: 'none', border: 'none', cursor: 'pointer' }}>Community</button>
         </div>
+
       </div>
     </footer>
   );
