@@ -5,10 +5,13 @@
 /* ===== GLOBAL STYLES ===== */
 
 body {
-  background-color: #E0D2BD;
+  background-color: #ffffff;  /* PURE WHITE */
   color: #00231C;
   font-family: Calibri, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 
 /* ===== HEADINGS ===== */
 
