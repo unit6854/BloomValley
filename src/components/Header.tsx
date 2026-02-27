@@ -1,4 +1,4 @@
-import { Leaf, ShoppingCart } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 interface HeaderProps {
   currentPage: string;
@@ -15,36 +15,45 @@ function Header({ currentPage, onNavigate, cartCount }: HeaderProps) {
   ];
 
   return (
-    <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavigate('home')}>
-            <div className="w-12 h-12 border-2 border-green-700 flex items-center justify-center">
-              <Leaf className="text-green-700" size={24} />
-            </div>
-            <h1 className="text-2xl font-bold text-green-700">Bloom Valley Nursery</h1>
+    <header style={{ borderBottom: '1px solid #79512E', backgroundColor: '#E0D2BD', position: 'sticky', top: 0, zIndex: 50 }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
+          
+          {/* LOGO */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }} onClick={() => onNavigate('home')}>
+            <img src="/Client1_LogoPalette1_790D1D.png" alt="Bloom Valley Logo" style={{ width: '48px', height: '48px' }} />
+            <h1 style={{ fontSize: '25px', fontWeight: 'bold', fontFamily: 'Arial', color: '#790D1D' }}>Bloom Valley Nursery</h1>
           </div>
 
-          <nav className="hidden md:flex items-center gap-8">
+          {/* NAV LINKS */}
+          <nav style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id as any)}
-                className={`font-medium transition-colors ${
-                  currentPage === item.id
-                    ? 'text-green-700 border-b-2 border-green-700'
-                    : 'text-gray-700 hover:text-green-700'
-                }`}
+                style={{
+                  fontFamily: 'Arial',
+                  fontWeight: 'bold',
+                  fontSize: '15px',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  color: currentPage === item.id ? '#790D1D' : '#00231C',
+                  borderBottom: currentPage === item.id ? '2px solid #790D1D' : 'none',
+                  padding: '4px 0'
+                }}
               >
                 {item.label}
               </button>
             ))}
           </nav>
 
-          <button className="flex items-center gap-2 px-4 py-2 border-2 border-green-700 text-green-700 font-medium hover:bg-green-50 transition-colors">
+          {/* CART BUTTON */}
+          <button style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: 'transparent', color: '#79512E', fontFamily: 'Arial', fontWeight: 'bold', cursor: 'pointer' }}>
             <ShoppingCart size={20} />
             <span>Cart ({cartCount})</span>
           </button>
+
         </div>
       </div>
     </header>
