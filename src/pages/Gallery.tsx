@@ -15,12 +15,12 @@ function Gallery({ onAddToCart }: GalleryProps) {
   ];
 
   return (
-    <div style={{ backgroundColor: '#E0D2BD', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '64px 32px' }}>
 
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '48px' }}>
           <h1 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '30px', color: '#790D1D', margin: 0 }}>Shop / Gallery</h1>
-          <button style={{ padding: '8px 24px', border: '2px solid #79512E', backgroundColor: 'transparent', color: '#79512E', fontFamily: 'Arial', fontWeight: 'bold', cursor: 'pointer' }}>
+          <button style={{ padding: '8px 24px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', color: '#79512E', fontFamily: 'Arial', fontWeight: 'bold', cursor: 'pointer' }}>
             View Shopping Cart (0)
           </button>
         </div>
@@ -30,15 +30,15 @@ function Gallery({ onAddToCart }: GalleryProps) {
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr>
-              <th style={{ border: '2px solid #79512E', padding: '16px', textAlign: 'left', fontFamily: 'Arial', fontWeight: 'bold', color: '#790D1D', backgroundColor: '#D4C4A8', width: '120px' }}>Image</th>
-              <th style={{ border: '2px solid #79512E', padding: '16px', textAlign: 'left', fontFamily: 'Arial', fontWeight: 'bold', color: '#790D1D', backgroundColor: '#D4C4A8' }}>Description</th>
-              <th style={{ border: '2px solid #79512E', padding: '16px', textAlign: 'left', fontFamily: 'Arial', fontWeight: 'bold', color: '#790D1D', backgroundColor: '#D4C4A8', width: '100px' }}>Price</th>
-              <th style={{ border: '2px solid #79512E', padding: '16px', textAlign: 'left', fontFamily: 'Arial', fontWeight: 'bold', color: '#790D1D', backgroundColor: '#D4C4A8', width: '130px' }}>Action</th>
+              <th style={{ border: '2px solid #79512E', padding: '16px', textAlign: 'left', fontFamily: 'Arial', fontWeight: 'bold', color: '#790D1D', backgroundColor: '#E0D2BD', width: '120px' }}>Image</th>
+              <th style={{ border: '2px solid #79512E', padding: '16px', textAlign: 'left', fontFamily: 'Arial', fontWeight: 'bold', color: '#790D1D', backgroundColor: '#E0D2BD' }}>Description</th>
+              <th style={{ border: '2px solid #79512E', padding: '16px', textAlign: 'left', fontFamily: 'Arial', fontWeight: 'bold', color: '#790D1D', backgroundColor: '#E0D2BD', width: '100px' }}>Price</th>
+              <th style={{ border: '2px solid #79512E', padding: '16px', textAlign: 'left', fontFamily: 'Arial', fontWeight: 'bold', color: '#790D1D', backgroundColor: '#E0D2BD', width: '130px' }}>Action</th>
             </tr>
           </thead>
           <tbody>
             {plants.map((plant) => (
-              <tr key={plant.id} style={{ backgroundColor: '#E0D2BD' }}>
+              <tr key={plant.id} style={{ backgroundColor: '#ffffff' }}>
                 <td style={{ border: '2px solid #79512E', padding: '12px' }}>
                   <img src={plant.image} alt={plant.name} style={{ width: '80px', height: '80px', objectFit: 'cover', display: 'block' }} />
                 </td>
@@ -50,7 +50,7 @@ function Gallery({ onAddToCart }: GalleryProps) {
                   ${plant.price}
                 </td>
                 <td style={{ border: '2px solid #79512E', padding: '16px' }}>
-                  <button onClick={onAddToCart} style={{ padding: '8px 16px', backgroundColor: '#790D1D', color: '#E0D2BD', fontFamily: 'Arial', fontWeight: 'bold', border: 'none', cursor: 'pointer' }}>
+                  <button onClick={onAddToCart} style={{ padding: '8px 16px', backgroundColor: '#E0D2BD', color: '#79512E', fontFamily: 'Arial', fontWeight: 'bold', border: '2px solid #79512E', cursor: 'pointer' }}>
                     Add to Cart
                   </button>
                 </td>
