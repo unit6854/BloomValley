@@ -9,10 +9,7 @@ function About() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -22,82 +19,90 @@ function About() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-3xl font-bold text-green-700 mb-12">About Us</h1>
+    <div style={{ backgroundColor: '#E0D2BD', minHeight: '100vh' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '64px 32px' }}>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div className="border-2 border-green-700 p-8">
-          <p className="text-lg text-gray-700 mb-4">
-            Bloom Valley Nursery is a local, family-owned plant nursery.
-          </p>
-          <p className="text-lg text-gray-700">
-            We focus on sustainability, creativity, and community.
-          </p>
+        <h1 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '30px', color: '#790D1D', marginBottom: '48px' }}>
+          About Us
+        </h1>
+
+        {/* INFO BOXES */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', marginBottom: '64px' }}>
+          <div style={{ border: '2px solid #79512E', padding: '32px', backgroundColor: '#E0D2BD' }}>
+            <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', marginBottom: '16px' }}>
+              Bloom Valley Nursery is a local, family-owned plant nursery.
+            </p>
+            <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C' }}>
+              We focus on sustainability, creativity, and community.
+            </p>
+          </div>
+          <div style={{ border: '2px solid #79512E', padding: '32px', backgroundColor: '#E0D2BD' }}>
+            <h3 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '16px', color: '#790D1D', marginBottom: '16px' }}>
+              Hours of Operation:
+            </h3>
+            <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', marginBottom: '8px' }}>Mon–Fri: 9 a.m.–6 p.m.</p>
+            <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C' }}>Sat–Sun: 10 a.m.–5 p.m.</p>
+          </div>
         </div>
 
-        <div className="border-2 border-green-700 p-8">
-          <h3 className="font-bold text-green-700 mb-4 text-lg">Hours of Operation:</h3>
-          <p className="text-gray-700 mb-2">Mon–Fri: 9 a.m.–6 p.m.</p>
-          <p className="text-gray-700">Sat–Sun: 10 a.m.–5 p.m.</p>
+        {/* FEEDBACK FORM */}
+        <div style={{ border: '2px solid #79512E', padding: '32px', backgroundColor: '#E0D2BD' }}>
+          <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '25px', color: '#790D1D', marginBottom: '24px' }}>
+            Feedback & Custom Orders
+          </h2>
+
+          <form onSubmit={handleSubmit}>
+            <div style={{ marginBottom: '24px' }}>
+              <label style={{ display: 'block', fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#00231C', marginBottom: '8px' }}>
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
+              />
+            </div>
+
+            <div style={{ marginBottom: '24px' }}>
+              <label style={{ display: 'block', fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#00231C', marginBottom: '8px' }}>
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
+              />
+            </div>
+
+            <div style={{ marginBottom: '24px' }}>
+              <label style={{ display: 'block', fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#00231C', marginBottom: '8px' }}>
+                Message / Custom order details
+              </label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={6}
+                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
+              />
+            </div>
+
+            <button
+              type="submit"
+              style={{ padding: '12px 32px', backgroundColor: '#790D1D', color: '#E0D2BD', fontFamily: 'Arial', fontWeight: 'bold', border: 'none', cursor: 'pointer' }}
+            >
+              Submit Feedback
+            </button>
+          </form>
         </div>
-      </div>
 
-      <div className="border-2 border-green-700 p-8">
-        <h2 className="text-2xl font-bold text-green-700 mb-6">Feedback & Custom Orders</h2>
-
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="name" className="block font-medium text-gray-700 mb-2">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border-2 border-green-700 focus:outline-none focus:ring-2 focus:ring-green-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="email" className="block font-medium text-gray-700 mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border-2 border-green-700 focus:outline-none focus:ring-2 focus:ring-green-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block font-medium text-gray-700 mb-2">
-              Message / Custom order details
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={6}
-              className="w-full px-4 py-2 border-2 border-green-700 focus:outline-none focus:ring-2 focus:ring-green-700"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="px-8 py-3 bg-green-700 text-white font-medium hover:bg-green-800 transition-colors"
-          >
-            Submit Feedback
-          </button>
-        </form>
       </div>
     </div>
   );
