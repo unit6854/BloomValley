@@ -15,7 +15,7 @@ function About() {
   };
 
   return (
-    <div style={{ backgroundColor: '#E0D2BD', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '64px 32px' }}>
 
         <h1 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '30px', color: '#790D1D', marginBottom: '48px' }}>About Us</h1>
@@ -44,7 +44,7 @@ function About() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
+                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#ffffff', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
               />
             </div>
 
@@ -56,7 +56,7 @@ function About() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
+                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#ffffff', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
               />
             </div>
 
@@ -68,11 +68,11 @@ function About() {
                 onChange={handleChange}
                 required
                 rows={6}
-                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
+                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#ffffff', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
               />
             </div>
 
-            <button type="submit" style={{ padding: '12px 32px', backgroundColor: '#790D1D', color: '#E0D2BD', fontFamily: 'Arial', fontWeight: 'bold', border: 'none', cursor: 'pointer' }}>
+            <button type="submit" style={{ padding: '12px 32px', backgroundColor: '#E0D2BD', color: '#79512E', fontFamily: 'Arial', fontWeight: 'bold', border: '2px solid #79512E', cursor: 'pointer' }}>
               Submit Feedback
             </button>
 
