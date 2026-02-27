@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ===== GLOBAL STYLES ===== */
+
+body {
+  background-color: #E0D2BD;
+  color: #00231C;
+  font-family: Calibri, Arial, sans-serif;
+}
+
+/* ===== HEADINGS ===== */
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: #790D1D;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: #790D1D;
+}
+
+h3 {
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  color: #00231C;
+}
+
+/* ===== BODY TEXT ===== */
+
+p {
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+  color: #00231C;
+}
+
+/* ===== BUTTONS ===== */
+
+button {
+  background-color: #79512E;
+  color: #E0D2BD;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #790D1D;
+}
