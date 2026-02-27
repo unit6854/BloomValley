@@ -1,35 +1,14 @@
 function Community() {
   const testimonials = [
-    {
-      quote: 'Best plant shop in town! Amazing quality and friendly staff.',
-      author: 'Sarah M.',
-    },
-    {
-      quote: 'Love the variety and the helpful plant care tips.',
-      author: 'John D.',
-    },
-    {
-      quote: 'The community workshops are fantastic for learning gardening!',
-      author: 'Maria L.',
-    },
+    { quote: 'Best plant shop in town! Amazing quality and friendly staff.', author: 'Sarah M.' },
+    { quote: 'Love the variety and the helpful plant care tips.', author: 'John D.' },
+    { quote: 'The community workshops are fantastic for learning gardening!', author: 'Maria L.' },
   ];
 
   const events = [
-    {
-      title: 'Spring Plant Care Workshop',
-      date: 'April 15, 2024',
-      time: '2:00 PM',
-    },
-    {
-      title: 'Sustainable Gardening Seminar',
-      date: 'April 22, 2024',
-      time: '3:00 PM',
-    },
-    {
-      title: 'Community Garden Tour',
-      date: 'May 1, 2024',
-      time: '10:00 AM',
-    },
+    { title: 'Spring Plant Care Workshop', date: 'April 15, 2024', time: '2:00 PM' },
+    { title: 'Sustainable Gardening Seminar', date: 'April 22, 2024', time: '3:00 PM' },
+    { title: 'Community Garden Tour', date: 'May 1, 2024', time: '10:00 AM' },
   ];
 
   const partners = [
@@ -40,51 +19,67 @@ function Community() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-3xl font-bold text-green-700 mb-12">Community & Events</h1>
+    <div style={{ backgroundColor: '#E0D2BD', minHeight: '100vh' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '64px 32px' }}>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <section>
-          <h2 className="text-2xl font-bold text-green-700 mb-6">Customer Testimonials</h2>
-          <div className="space-y-6">
+        <h1 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '30px', color: '#790D1D', marginBottom: '48px' }}>
+          Community & Events
+        </h1>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', marginBottom: '64px' }}>
+
+          {/* TESTIMONIALS */}
+          <section>
+            <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '25px', color: '#790D1D', marginBottom: '24px' }}>
+              Customer Testimonials
+            </h2>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="border-l-4 border-green-700 pl-6 py-2">
-                <p className="text-gray-700 italic mb-2">"{testimonial.quote}"</p>
-                <p className="text-green-700 font-medium">— {testimonial.author}</p>
+              <div key={index} style={{ borderLeft: '4px solid #790D1D', paddingLeft: '24px', marginBottom: '24px' }}>
+                <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', fontStyle: 'italic', marginBottom: '8px' }}>
+                  "{testimonial.quote}"
+                </p>
+                <p style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#790D1D' }}>
+                  — {testimonial.author}
+                </p>
               </div>
             ))}
-          </div>
-        </section>
+          </section>
 
-        <section>
-          <h2 className="text-2xl font-bold text-green-700 mb-6">Upcoming Workshops & Events</h2>
-          <div className="space-y-4">
+          {/* EVENTS */}
+          <section>
+            <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '25px', color: '#790D1D', marginBottom: '24px' }}>
+              Upcoming Workshops & Events
+            </h2>
             {events.map((event, index) => (
-              <div key={index} className="border-2 border-green-700 p-4">
-                <h3 className="font-bold text-green-700 mb-2">{event.title}</h3>
-                <p className="text-gray-600 text-sm">{event.date}</p>
-                <p className="text-gray-600 text-sm">{event.time}</p>
+              <div key={index} style={{ border: '2px solid #79512E', padding: '16px', marginBottom: '16px', backgroundColor: '#E0D2BD' }}>
+                <h3 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '16px', color: '#790D1D', marginBottom: '8px' }}>
+                  {event.title}
+                </h3>
+                <p style={{ fontFamily: 'Calibri', fontSize: '14px', color: '#00231C' }}>{event.date}</p>
+                <p style={{ fontFamily: 'Calibri', fontSize: '14px', color: '#00231C' }}>{event.time}</p>
               </div>
             ))}
+          </section>
+
+        </div>
+
+        {/* PARTNERS */}
+        <section>
+          <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '25px', color: '#790D1D', marginBottom: '24px' }}>
+            Local Collaborations & Partners
+          </h2>
+          <div style={{ border: '2px solid #79512E', padding: '32px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+              {partners.map((partner, index) => (
+                <div key={index} style={{ border: '1px solid #79512E', padding: '24px', textAlign: 'center', backgroundColor: '#D4C4A8' }}>
+                  <p style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#00231C' }}>{partner}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
-      </div>
 
-      <section>
-        <h2 className="text-2xl font-bold text-green-700 mb-6">Local Collaborations & Partners</h2>
-        <div className="border-2 border-green-700 p-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="bg-green-50 border border-green-700 p-6 text-center rounded hover:bg-green-100 transition-colors"
-              >
-                <p className="font-medium text-green-700">{partner}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
