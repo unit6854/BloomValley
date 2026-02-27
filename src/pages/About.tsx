@@ -1,11 +1,7 @@
 import { useState } from 'react';
 
 function About() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -19,90 +15,40 @@ function About() {
   };
 
   return (
-    <div style={{ backgroundColor: '#E0D2BD', minHeight: '100vh' }}>
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '64px 32px' }}>
+    <div className="page-wrapper">
+      <div className="page-content">
+        <h1 style={{ marginBottom: '48px' }}>About Us</h1>
 
-        <h1 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '30px', color: '#790D1D', marginBottom: '48px' }}>
-          About Us
-        </h1>
-
-        {/* INFO BOXES */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', marginBottom: '64px' }}>
-          <div style={{ border: '2px solid #79512E', padding: '32px', backgroundColor: '#E0D2BD' }}>
-            <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', marginBottom: '16px' }}>
-              Bloom Valley Nursery is a local, family-owned plant nursery.
-            </p>
-            <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C' }}>
-              We focus on sustainability, creativity, and community.
-            </p>
+        <div className="grid-2" style={{ marginBottom: '64px' }}>
+          <div className="card">
+            <p>Bloom Valley Nursery is a local, family-owned plant nursery.</p>
+            <p style={{ marginTop: '16px' }}>We focus on sustainability, creativity, and community.</p>
           </div>
-          <div style={{ border: '2px solid #79512E', padding: '32px', backgroundColor: '#E0D2BD' }}>
-            <h3 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '16px', color: '#790D1D', marginBottom: '16px' }}>
-              Hours of Operation:
-            </h3>
-            <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', marginBottom: '8px' }}>Mon–Fri: 9 a.m.–6 p.m.</p>
-            <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C' }}>Sat–Sun: 10 a.m.–5 p.m.</p>
+          <div className="card">
+            <h3>Hours of Operation:</h3>
+            <p style={{ marginTop: '16px' }}>Mon–Fri: 9 a.m.–6 p.m.</p>
+            <p>Sat–Sun: 10 a.m.–5 p.m.</p>
           </div>
         </div>
 
-        {/* FEEDBACK FORM */}
-        <div style={{ border: '2px solid #79512E', padding: '32px', backgroundColor: '#E0D2BD' }}>
-          <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '25px', color: '#790D1D', marginBottom: '24px' }}>
-            Feedback & Custom Orders
-          </h2>
-
+        <div className="card">
+          <h2 style={{ marginBottom: '24px' }}>Feedback & Custom Orders</h2>
           <form onSubmit={handleSubmit}>
-            <div style={{ marginBottom: '24px' }}>
-              <label style={{ display: 'block', fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#00231C', marginBottom: '8px' }}>
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
-              />
+            <div className="form-group">
+              <label className="form-label">Name</label>
+              <input className="form-input" type="text" name="name" value={formData.name} onChange={handleChange} required />
             </div>
-
-            <div style={{ marginBottom: '24px' }}>
-              <label style={{ display: 'block', fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#00231C', marginBottom: '8px' }}>
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
-              />
+            <div className="form-group">
+              <label className="form-label">Email</label>
+              <input className="form-input" type="email" name="email" value={formData.email} onChange={handleChange} required />
             </div>
-
-            <div style={{ marginBottom: '24px' }}>
-              <label style={{ display: 'block', fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#00231C', marginBottom: '8px' }}>
-                Message / Custom order details
-              </label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                style={{ width: '100%', padding: '8px 16px', border: '2px solid #79512E', backgroundColor: '#E0D2BD', fontFamily: 'Calibri', fontSize: '16px', color: '#00231C', boxSizing: 'border-box' }}
-              />
+            <div className="form-group">
+              <label className="form-label">Message / Custom order details</label>
+              <textarea className="form-input" name="message" value={formData.message} onChange={handleChange} required rows={6} />
             </div>
-
-            <button
-              type="submit"
-              style={{ padding: '12px 32px', backgroundColor: '#790D1D', color: '#E0D2BD', fontFamily: 'Arial', fontWeight: 'bold', border: 'none', cursor: 'pointer' }}
-            >
-              Submit Feedback
-            </button>
+            <button className="btn-primary" type="submit">Submit Feedback</button>
           </form>
         </div>
-
       </div>
     </div>
   );
