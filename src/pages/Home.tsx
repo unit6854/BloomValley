@@ -20,7 +20,7 @@ function Home() {
         <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
           <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '30px', color: '#ffffff', marginBottom: '32px' }}>Welcome to Bloom Valley</h2>
           <div style={{ display: 'flex', gap: '16px' }}>
-            <button style={{ padding: '12px 32px', backgroundColor: '#790D1D', color: '#ffffff', fontFamily: 'Arial', fontWeight: 'bold', border: '2px solid #790D1D', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <button style={{ padding: '12px 32px', backgroundColor: '#E0D2BD', color: '#79512E', fontFamily: 'Arial', fontWeight: 'bold', border: '2px solid #79512E', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
               Shop Plants <ArrowRight size={20} />
             </button>
             <button style={{ padding: '12px 32px', backgroundColor: 'transparent', color: '#ffffff', fontFamily: 'Arial', fontWeight: 'bold', border: '2px solid #ffffff', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -35,7 +35,7 @@ function Home() {
           <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '25px', color: '#790D1D', marginBottom: '32px' }}>Shopping Promos</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
             {promos.map((promo, index) => (
-              <div key={index} style={{ border: '2px solid #79512E', padding: '32px', textAlign: 'center', backgroundColor: '#ffffff' }}>
+              <div key={index} style={{ border: '2px solid #79512E', padding: '32px', textAlign: 'center', backgroundColor: '#E0D2BD' }}>
                 <p style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '20px', color: '#790D1D', marginBottom: '8px' }}>{promo.title}</p>
                 <p style={{ fontFamily: 'Calibri', fontSize: '16px', color: '#00231C' }}>{promo.subtitle}</p>
               </div>
@@ -47,7 +47,7 @@ function Home() {
           <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '25px', color: '#790D1D', marginBottom: '32px' }}>Categories</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
             {categories.map((category, index) => (
-              <div key={index} style={{ border: '2px solid #79512E', padding: '48px', textAlign: 'center', backgroundColor: '#ffffff', cursor: 'pointer' }}>
+              <div key={index} style={{ border: '2px solid #79512E', padding: '48px', textAlign: 'center', backgroundColor: '#E0D2BD', cursor: 'pointer' }}>
                 <p style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '16px', color: '#00231C' }}>{category.name}</p>
               </div>
             ))}
