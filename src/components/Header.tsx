@@ -18,10 +18,10 @@ function Header({ currentPage, onNavigate, cartCount }: HeaderProps) {
     <header style={{ borderBottom: '1px solid #79512E', backgroundColor: '#E0D2BD', position: 'sticky', top: 0, zIndex: 50 }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
-          
+
           {/* LOGO */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }} onClick={() => onNavigate('home')}>
-            <img src="/Client1_LogoPalette1_790D1D.png" alt="Bloom Valley Logo" style={{ width: '48px', height: '48px' }} />
+            <img src="/Client1_LogoPalette1_790D1D.png" alt="Bloom Valley Logo" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
             <h1 style={{ fontSize: '25px', fontWeight: 'bold', fontFamily: 'Arial', color: '#790D1D' }}>Bloom Valley Nursery</h1>
           </div>
 
