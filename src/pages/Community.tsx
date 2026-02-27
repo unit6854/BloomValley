@@ -1,8 +1,8 @@
 function Community() {
   const testimonials = [
-    { quote: 'Best plant shop in town! Amazing quality and super friendly staff.', author: 'Sarah M.' },
-    { quote: 'Love the variety!They also gave me helpful plant care tips.', author: 'John D.' },
-    { quote: 'The community workshops werefantastic for learning about cool gardening techniques!', author: 'Maria L.' },
+    { quote: 'Best plant shop in town! Amazing quality and friendly staff.', author: 'Sarah M.' },
+    { quote: 'Love the variety and the helpful plant care tips.', author: 'John D.' },
+    { quote: 'The community workshops are fantastic for learning gardening!', author: 'Maria L.' },
   ];
 
   const events = [
@@ -14,12 +14,12 @@ function Community() {
   const partners = [
     'Local Parks & Rec',
     'City Green Initiative',
-    'Sustainable Living Mission',
+    'Sustainable Living Coalition',
     'Community Garden Alliance',
   ];
 
   return (
-    <div style={{ backgroundColor: '#E0D2BD', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '64px 32px' }}>
 
         <h1 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '30px', color: '#790D1D', marginBottom: '48px' }}>Community & Events</h1>
@@ -51,10 +51,10 @@ function Community() {
 
         <section>
           <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '25px', color: '#790D1D', marginBottom: '24px' }}>Local Collaborations & Partners</h2>
-          <div style={{ border: '2px solid #79512E', padding: '32px', backgroundColor: '#E0D2BD' }}>
+          <div style={{ border: '2px solid #79512E', padding: '32px', backgroundColor: '#ffffff' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
               {partners.map((partner, i) => (
-                <div key={i} style={{ border: '1px solid #79512E', padding: '24px', textAlign: 'center', backgroundColor: '#D4C4A8' }}>
+                <div key={i} style={{ border: '1px solid #79512E', padding: '24px', textAlign: 'center', backgroundColor: '#E0D2BD' }}>
                   <p style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '15px', color: '#00231C', margin: 0 }}>{partner}</p>
                 </div>
               ))}
