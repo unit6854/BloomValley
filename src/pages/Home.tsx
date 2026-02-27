@@ -17,12 +17,14 @@ function Home() {
     <div style={{ backgroundColor: '#E0D2BD' }}>
 
       {/* HERO IMAGE SECTION */}
-      <section style={{ position: 'relative', height: '500px', overflow: 'hidden' }}>
-        <img
-          src="/Client1_MapleTree.png"
-          alt="Bloom Valley Garden"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        />
+      <section style={{ 
+        position: 'relative', 
+        height: '500px', 
+        overflow: 'hidden',
+        backgroundImage: 'url(Client1_MapleTree.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
         <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.3)' }}></div>
         <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
           <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', fontSize: '30px', color: '#E0D2BD', marginBottom: '32px' }}>
