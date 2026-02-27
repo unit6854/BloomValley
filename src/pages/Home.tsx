@@ -17,11 +17,11 @@ function Home() {
     <div style={{ backgroundColor: '#E0D2BD' }}>
 
       {/* HERO IMAGE SECTION */}
-      <section style={{ 
-        position: 'relative', 
-        height: '500px', 
+      <section style={{
+        position: 'relative',
+        height: '500px',
         overflow: 'hidden',
-        backgroundImage: 'url(Client1_MapleTree.png)',
+        backgroundImage: 'url(/Client1_MapleTree.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
