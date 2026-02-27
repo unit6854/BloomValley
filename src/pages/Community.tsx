@@ -6,9 +6,9 @@ function Community() {
   ];
 
   const events = [
-    { title: 'Spring Plant Care Workshop', date: 'April 15, 2024', time: '2:00 PM' },
-    { title: 'Sustainable Gardening Seminar', date: 'April 22, 2024', time: '3:00 PM' },
-    { title: 'Community Garden Tour', date: 'May 1, 2024', time: '10:00 AM' },
+    { title: 'Spring Plant Care Workshop', date: 'April 15, 2026', time: '2:00 PM' },
+    { title: 'Sustainable Gardening Seminar', date: 'April 22, 2026', time: '3:00 PM' },
+    { title: 'Community Garden Tour', date: 'May 1, 2026', time: '10:00 AM' },
   ];
 
   const partners = [
